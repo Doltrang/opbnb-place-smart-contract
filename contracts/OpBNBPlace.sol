@@ -71,6 +71,10 @@ contract OpBNBPlace is AccessControlUpgradeable, PausableUpgradeable {
         emit PlacePixel(_msgSender(), loc_, color_, lockUntilSec);
     }
 
+    function withdrawAll() external virtual onlyRole(WITHDRAWER_ROLE) whenNotPaused {
+        payable(_msgSender()).transfer(address(this).balance);
+    }
+
     /**
      * @dev called by the owner to pause, triggers stopped state
      */

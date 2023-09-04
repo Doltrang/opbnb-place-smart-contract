@@ -60,8 +60,8 @@ module.exports = {
       timeout: 2_147_483_647,
     },
     "opBNB:mainnet": {
-      url: "TBD",
-      chainId: 0,
+      url: "https://opbnb-mainnet-rpc.bnbchain.org",
+      chainId: 204,
       gasPrice: 1000000000,
       accounts: [opMainnetPrivateKey],
       timeout: 2_147_483_647,
